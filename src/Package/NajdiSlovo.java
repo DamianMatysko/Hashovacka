@@ -14,7 +14,7 @@ public class NajdiSlovo {
         this.hashCode = hashCode;
     }
 
-    public String najdiRiesenieBinaryMethod() {
+    public String najdiRiesenie() {
         StringBuffer stringBuffer = new StringBuffer(slovo);
         int countOfSpaces=1;
         String binaryCode="";
@@ -61,7 +61,7 @@ public class NajdiSlovo {
         return null;
     }
 
-    public String najdiRiesenie() {
+    public String najdiRiesenieOldMethod() {
         StringBuffer stringBuffer = new StringBuffer(slovo);
         Set<String> mySet = new HashSet<String>();
         List<String> myList = new ArrayList<>();
@@ -105,6 +105,6 @@ public class NajdiSlovo {
 
     public static void main(String[] args) {
         //System.out.println(new NajdiSlovo("123456789987654321", "123 456 789 987 654 321".hashCode()).najdiRiesenieBinaryMethod());
-        System.out.println(new NajdiSlovo("dnesranosomisielnavylet", "dnes rano som isiel na vylet".hashCode()).najdiRiesenieBinaryMethod());
+        System.out.println(new NajdiSlovo("dnesranosomisielnavylet", "dnes rano som isiel na vylet".hashCode()).najdiRiesenie());
     }
 }
