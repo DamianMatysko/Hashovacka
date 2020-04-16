@@ -20,6 +20,14 @@ public class NajdiSlovo {
         String binaryCode="";
         List<String> myList = new ArrayList<>();
 
+        if (slovo.hashCode() == hashCode) {
+            return slovo;
+        }
+
+        if (slovo.length()==1){
+            return null;
+        }
+
         for (int i=0;i<slovo.length()-1;i++){
             binaryCode += "1";
         }
@@ -96,6 +104,7 @@ public class NajdiSlovo {
     }
 
     public static void main(String[] args) {
-        System.out.println(new NajdiSlovo("123456789987654321", "123456789 987654321".hashCode()).najdiRiesenieBinaryMethod());
+        //System.out.println(new NajdiSlovo("123456789987654321", "123 456 789 987 654 321".hashCode()).najdiRiesenieBinaryMethod());
+        System.out.println(new NajdiSlovo("dnesranosomisielnavylet", "dnes rano som isiel na vylet".hashCode()).najdiRiesenieBinaryMethod());
     }
 }
